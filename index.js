@@ -14,11 +14,6 @@ app.get("/first", (req, res) => {
 
 // ✅ Test 2: GET /second → Should return 400 Bad Request with headers & body
 app.get("/second", (req, res) => {
-  res.set({
-    "Content-Type": "application/json",
-    "Authorization": "Bearer token123",
-  });
-
   res.status(400).json({
     param1: "value1",
     param2: "value2",
